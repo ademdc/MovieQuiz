@@ -11,43 +11,60 @@ namespace GameForm
         private string genre;
         private Random rnd;
         private int random;
+        private int numOfActor = 10;
 
-        public QuestionGenre()
+        private string actor;
+        public QuestionActor()
         {
             rnd = new Random();
-            random = rnd.Next(1, 6);
+            random = rnd.Next(1, numOfActor);
 
             switch (random)
             {
                 case 1:
-                    genre = "Action";
+                    actor = "Leonardo Di Caprio";
                     break;
                 case 2:
-                    genre = "Drama";
+                    actor = "Morgan Freeman";
                     break;
                 case 3:
-                    genre = "Horror";
+                    actor = "Angelina Jolie";
                     break;
                 case 4:
-                    genre = "Romance";
+                    actor = "Nicole Kidman";
                     break;
                 case 5:
-                    genre = "Comedy";
+                    actor = "Mat Deamon";
+                    break;
+                case 6:
+                    actor = "Mila Kunis";
+                    break;
+                case 7:
+                    actor = "Russel Crow";
+                    break;
+                case 8:
+                    actor = "Dominic Purcel";
+                    break;
+                case 9:
+                    actor = "Emilia Clark";
+                    break;
+                case 10:
+                    actor = "Emma Watson";
                     break;
                 default:
-                    question = "An error occured";
+                    actor = "An error occured";
                     break;
-
             }
-            question = "Name a movie of the following genre " + genre;
+            question = "Name a movie in which " + actor + " plays one of the leading roles";
+
         }
         public string getQuestion()
         {
             return question;
         }
-        public string getGenre()
+        public string getActor()
         {
-            return genre;
+            return actor;
         }
-     }
+    }
 }
