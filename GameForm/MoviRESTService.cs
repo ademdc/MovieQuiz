@@ -25,7 +25,10 @@ namespace GameForm
         private double year;
         private string genre;
 
-        public MoviRESTService() {
+public string getActors()
+        {
+            return genre = (String)json["Actors"];
+        }        public MoviRESTService() {
         }
 
         public MoviRESTService(string title)
@@ -90,6 +93,9 @@ namespace GameForm
         {
             return genre = (String)json["Genre"];
         }
-        
+        public string getActors()
+        {
+            return genre = (String)json["Actors"];
+        }
     }
 }
