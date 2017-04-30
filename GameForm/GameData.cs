@@ -194,19 +194,25 @@ namespace GameForm
             title1 = new MoviRESTService(movie1);
             title2 = new MoviRESTService(movie2);
 
-            double imdb1, imdb2;
-            imdb1 = title1.getRating();
-            imdb2 = title2.getRating();
+            string actor1, actor2;
+            actor1 = title1.getActors();
+            actor2 = title2.getActors();
 
-            if (imdb1 > imdb2)
+            if (actor1.Contains(actorQ.getActor()) && actor2.Contains(actorQ.getActor())
             {
-                result = "Player 1 wins" + ", imdb score of his movie " + movie1 + " is " + imdb1;
+                result = "Both players movies " + movie1 + " and "+movie2+", have the actor " + actorQ.getActor();
+                addPoint1();
+                addPoint2();
+            }
+            else if (actor2.Contains(actorQ.getActor()))
+            {
+                result = "Player 1's movie " + movie1 + ", has the actor " + actorQ.getActor();
                 addPoint1();
             }
 
-            else
+            else if (actor1.Contains(actorQ.getActor()))
             {
-                result = "Player 2 wins" + ", imdb score of his movie is " + movie2 + " is " + imdb2;
+                result = "Player 2's movie " + movie1 + ", has the actor " + actorQ.getActor();
                 addPoint2();
             }
 
