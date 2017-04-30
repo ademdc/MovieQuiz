@@ -1,4 +1,5 @@
-﻿using System;
+
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace GameForm
     class GameData
     {
        public const int NUM_OF_QUESTIONS = 10;
+        public static final int NUM_OF_PLAYERS = 4;
        private Random rnd;
        private int randomNo;
         private int point1;
